@@ -47,7 +47,7 @@ Warning! Make sure to place WAD files to %{_datadir}/doom/
 %{_gamesdatadir}/doom/lights.pk3
 %{_datadir}/doc/%{name}/
 %{_datadir}/applications/%{name}.desktop
-%{_iconsdir}/hicolor/*/apps/%{name}.png
+#{_iconsdir}/hicolor/*/apps/%{name}.png
 
 #----------------------------------------------------------------------------
 
