@@ -26,7 +26,6 @@ Recommends:	doom-iwad
 Provides:	doom-engine
 
 Obsoletes:	prboom-plus <= 2.5.4.1
-Exclusivearch:	x86_64
 
 %description
 GZDoom is a Doom source port based on ZDoom. It features an
