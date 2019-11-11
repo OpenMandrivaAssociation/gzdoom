@@ -1,3 +1,4 @@
+%define _disable_lto 1
 Summary:	Enhanced Doom engine
 Name:		gzdoom
 Version:	4.2.4
