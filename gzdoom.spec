@@ -1,12 +1,12 @@
 %define _disable_lto 1
 Summary:	Enhanced Doom engine
 Name:		gzdoom
-Version:	4.2.4
-Release:	%mkrel 1
+Version:	4.4.0
+Release:	1
 License:	GPLv3+
 Group:		Games/Arcade
 Url:		https://zdoom.org
-Source0:	https://github.com/coelckers/gzdoom/archive/g%{version}.zip
+Source0:	https://github.com/coelckers/gzdoom/archive/g%{version}/%{name}-g%{version}.zip
 
 BuildRequires:	cmake
 BuildRequires:	imagemagick
