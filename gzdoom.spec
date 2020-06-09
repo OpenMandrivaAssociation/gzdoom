@@ -53,7 +53,7 @@ Warning! Make sure to place WAD files to %{_datadir}/doom/
 %prep
 %setup -qn %{name}-g%{version}
 
-sed -i s,"<unknown version>","%{version}",g tools/updaterevision/updaterevision.c
+#sed -i s,"<unknown version>","%{version}",g tools/updaterevision/updaterevision.c
 
 %build
 %cmake \
