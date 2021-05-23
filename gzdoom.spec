@@ -1,7 +1,7 @@
 %define _disable_lto 1
 Summary:	Enhanced Doom engine
 Name:		gzdoom
-Version:	4.4.0
+Version:	4.6.0
 Release:	1
 License:	GPLv3+
 Group:		Games/Arcade
