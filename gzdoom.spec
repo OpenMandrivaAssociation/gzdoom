@@ -1,4 +1,4 @@
-%define _disable_lto 1
+#define _disable_lto 1
 Summary:	Enhanced Doom engine
 Name:		gzdoom
 Version:	4.6.0
@@ -46,6 +46,9 @@ Warning! Make sure to place WAD files to %{_datadir}/doom/
 %{_gamesdatadir}/doom/game_support.pk3
 %{_gamesdatadir}/doom/gzdoom.pk3
 %{_gamesdatadir}/doom/lights.pk3
+%{_gamesdatadir}/doom/fm_banks/
+%{_gamesdatadir}/doom/game_widescreen_gfx.pk3
+%{_gamesdatadir}/doom/soundfonts/gzdoom.sf2
 %{_datadir}/doc/%{name}/
 %{_datadir}/applications/%{name}.desktop
 #{_iconsdir}/hicolor/*/apps/%{name}.png
@@ -59,7 +62,7 @@ Warning! Make sure to place WAD files to %{_datadir}/doom/
 
 %build
 %cmake \
-	-DCMAKE_BUILD_TYPE=RelWithDebInfo \
+	-DCMAKE_BUILD_TYPE=Release \
 	-DINSTALL_PK3_PATH=%{_gamesdatadir}/doom/
 %make_build
 
