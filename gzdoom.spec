@@ -1,4 +1,6 @@
 #define _disable_lto 1
+%define _empty_manifest_terminate_build 0
+
 Summary:	Enhanced Doom engine
 Name:		gzdoom
 Version:	4.6.0
