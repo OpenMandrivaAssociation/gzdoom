@@ -20,6 +20,8 @@ BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(sdl2)
 BuildRequires:	pkgconfig(xcursor)
 BuildRequires:	pkgconfig(zlib)
+BuildRequires:  cmake(ZMusic)
+Requires:       zmusic
 Requires:	TiMidity++
 
 Recommends:	doom-iwad
