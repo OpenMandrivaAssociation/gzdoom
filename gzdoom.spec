@@ -3,7 +3,7 @@
 
 Summary:	Enhanced Doom engine
 Name:		gzdoom
-Version:	4.6.0
+Version:	4.6.1
 Release:	1
 License:	GPLv3+
 Group:		Games/Arcade
