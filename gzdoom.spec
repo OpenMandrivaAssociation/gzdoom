@@ -22,6 +22,7 @@ BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(sdl2)
 BuildRequires:	pkgconfig(xcursor)
 BuildRequires:	pkgconfig(zlib)
+BuildRequires:	pkgconfig(vpx)
 BuildRequires:  cmake(ZMusic)
 Requires:       zmusic
 Requires:	TiMidity++
