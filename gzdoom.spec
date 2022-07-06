@@ -45,7 +45,7 @@ Warning! Make sure to place WAD files to %{_datadir}/doom/
 
 %files
 %{_bindir}/%{name}
-%{_libdir}/libdiscord-rpc.so
+#{_libdir}/libdiscord-rpc.so
 %{_gamesdatadir}/doom/brightmaps.pk3
 %{_gamesdatadir}/doom/game_support.pk3
 %{_gamesdatadir}/doom/gzdoom.pk3
@@ -56,7 +56,7 @@ Warning! Make sure to place WAD files to %{_datadir}/doom/
 %{_datadir}/doc/%{name}/
 %{_datadir}/applications/%{name}.desktop
 #{_iconsdir}/hicolor/*/apps/%{name}.png
-%{_includedir}/discord*
+#{_includedir}/discord*
 
 #----------------------------------------------------------------------------
 
