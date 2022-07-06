@@ -3,7 +3,7 @@
 
 Summary:	Enhanced Doom engine
 Name:		gzdoom
-Version:	4.8.0
+Version:	4.8.2
 Release:	1
 License:	GPLv3+
 Group:		Games/Arcade
@@ -66,11 +66,6 @@ Warning! Make sure to place WAD files to %{_datadir}/doom/
 #sed -i s,"<unknown version>","%{version}",g tools/updaterevision/updaterevision.c
 
 %build
-# Compilation crashing with Clang 14.0.4 and gzdoom 4.8.0. Use right now GCC for arm.
-%ifarch aarch64
-export CC=gcc
-export CXX=g++
-%endif
 %cmake \
 	-DCMAKE_BUILD_TYPE=Release \
 	-DINSTALL_PK3_PATH=%{_gamesdatadir}/doom/
