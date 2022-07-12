@@ -9,12 +9,14 @@ License:	GPLv3+
 Group:		Games/Arcade
 Url:		https://zdoom.org
 Source0:	https://github.com/coelckers/gzdoom/archive/g%{version}/%{name}-g%{version}.zip
+Patch0:		gzdoom-discord.patch
 
 BuildRequires:	cmake
 BuildRequires:	imagemagick
 BuildRequires:	bzip2-devel
 BuildRequires:	libgomp-devel
 BuildRequires:	jpeg-devel
+BuildRequires:	discord-rpc-devel
 BuildRequires:	pkgconfig(fluidsynth)
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
@@ -63,6 +65,7 @@ Warning! Make sure to place WAD files to %{_datadir}/doom/
 
 %prep
 %setup -qn %{name}-g%{version}
+%autopatch -p1
 
 #sed -i s,"<unknown version>","%{version}",g tools/updaterevision/updaterevision.c
 
