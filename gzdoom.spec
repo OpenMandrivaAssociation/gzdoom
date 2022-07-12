@@ -26,6 +26,7 @@ BuildRequires:	pkgconfig(vpx)
 BuildRequires:  cmake(ZMusic)
 Requires:       zmusic
 Requires:	TiMidity++
+Requires:	discord-rpc
 
 Recommends:	doom-iwad
 Provides:	doom-engine
