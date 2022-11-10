@@ -8,7 +8,7 @@ Release:	1
 License:	GPLv3+
 Group:		Games/Arcade
 Url:		https://zdoom.org
-Source0:	https://github.com/coelckers/gzdoom/archive/g%{version}/%{name}-g%{version}.zip
+Source0:	https://github.com/coelckers/gzdoom/archive/g%{version}/%{name}-g%{version}a.zip
 Patch0:		gzdoom-discord.patch
 
 BuildRequires:	cmake
@@ -64,7 +64,7 @@ Warning! Make sure to place WAD files to %{_datadir}/doom/
 #----------------------------------------------------------------------------
 
 %prep
-%setup -qn %{name}-g%{version}
+%setup -qn %{name}-g%{version}a
 %autopatch -p1
 
 #sed -i s,"<unknown version>","%{version}",g tools/updaterevision/updaterevision.c
