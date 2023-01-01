@@ -3,12 +3,12 @@
 
 Summary:	Enhanced Doom engine
 Name:		gzdoom
-Version:	4.9.0
+Version:	4.10.0
 Release:	1
 License:	GPLv3+
 Group:		Games/Arcade
 Url:		https://zdoom.org
-Source0:	https://github.com/coelckers/gzdoom/archive/g%{version}/%{name}-g%{version}a.zip
+Source0:	https://github.com/coelckers/gzdoom/archive/g%{version}/%{name}-g%{version}.zip
 Patch0:		gzdoom-discord.patch
 
 BuildRequires:	cmake
@@ -64,7 +64,7 @@ Warning! Make sure to place WAD files to %{_datadir}/doom/
 #----------------------------------------------------------------------------
 
 %prep
-%setup -qn %{name}-g%{version}a
+%setup -qn %{name}-g%{version}
 %autopatch -p1
 
 #sed -i s,"<unknown version>","%{version}",g tools/updaterevision/updaterevision.c
