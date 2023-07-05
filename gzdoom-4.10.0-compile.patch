@@ -1,0 +1,12 @@
+diff -up gzdoom-g4.10.0/src/common/rendering/vulkan/thirdparty/vk_mem_alloc/vk_mem_alloc.h.omv~ gzdoom-g4.10.0/src/common/rendering/vulkan/thirdparty/vk_mem_alloc/vk_mem_alloc.h
+--- gzdoom-g4.10.0/src/common/rendering/vulkan/thirdparty/vk_mem_alloc/vk_mem_alloc.h.omv~	2023-07-05 23:16:47.088285314 +0200
++++ gzdoom-g4.10.0/src/common/rendering/vulkan/thirdparty/vk_mem_alloc/vk_mem_alloc.h	2023-07-05 23:17:12.933436533 +0200
+@@ -108,6 +108,8 @@ Documentation of all members: vk_mem_all
+ extern "C" {
+ #endif
+ 
++#include <stdio.h>
++
+ /*
+ Define this macro to 0/1 to disable/enable support for recording functionality,
+ available through VmaAllocatorCreateInfo::pRecordSettings.
