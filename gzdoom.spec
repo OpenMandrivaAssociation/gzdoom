@@ -17,6 +17,7 @@ BuildRequires:	bzip2-devel
 BuildRequires:	libgomp-devel
 BuildRequires:	jpeg-devel
 BuildRequires:	discord-rpc-devel
+BuildRequires:	pkgconfig(libwebp)
 BuildRequires:	pkgconfig(fluidsynth)
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
