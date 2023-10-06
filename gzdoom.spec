@@ -8,7 +8,7 @@ License:	GPLv3+
 Group:		Games/Arcade
 Url:		https://zdoom.org
 Source0:	https://github.com/coelckers/gzdoom/archive/g%{version}/%{name}-g%{version}.zip
-Patch0:		gzdoom-discord.patch
+#Patch0:		gzdoom-discord.patch
 Patch1:		gzdoom-4.10.0-compile.patch
 
 BuildRequires:	cmake
