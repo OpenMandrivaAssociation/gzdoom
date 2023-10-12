@@ -1,3 +1,5 @@
+%global build_ldflags %{build_ldflags} -Wl,--undefined-version
+
 %undefine _debugsource_packages
 
 Summary:	Enhanced Doom engine
