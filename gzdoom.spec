@@ -73,6 +73,8 @@ Warning! Make sure to place WAD files to %{_datadir}/doom/
 #sed -i s,"<unknown version>","%{version}",g tools/updaterevision/updaterevision.c
 
 %build
+export CC=gcc
+export CXX=g++
 %cmake \
 	-DCMAKE_BUILD_TYPE=Release \
 	-DINSTALL_PK3_PATH=%{_gamesdatadir}/doom/
