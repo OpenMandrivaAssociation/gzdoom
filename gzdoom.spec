@@ -1,4 +1,4 @@
-%global build_ldflags %{build_ldflags} -Wl,--undefined-version
+#global build_ldflags %{build_ldflags} -Wl,--undefined-version
 
 %undefine _debugsource_packages
 
