@@ -1,4 +1,5 @@
 #global build_ldflags %{build_ldflags} -Wl,--undefined-version
+%define _disable_lto 1
 
 %undefine _debugsource_packages
 
