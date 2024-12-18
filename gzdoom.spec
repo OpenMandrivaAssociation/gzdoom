@@ -22,6 +22,7 @@ BuildRequires:	imagemagick
 BuildRequires:	bzip2-devel
 BuildRequires:	libgomp-devel
 BuildRequires:	jpeg-devel
+BuildRequires:	mold
 BuildRequires:	discord-rpc-devel
 BuildRequires:	pkgconfig(libwebp)
 BuildRequires:	pkgconfig(fluidsynth)
@@ -77,6 +78,7 @@ Warning! Make sure to place WAD files to %{_datadir}/doom/
 #sed -i s,"<unknown version>","%{version}",g tools/updaterevision/updaterevision.c
 
 %build
+export LD=mold
 #export CC=gcc
 #export CXX=g++
 %cmake \
