@@ -2,6 +2,8 @@
 %define _disable_lto 1
 %define _disable_ld_no_undefined 1
 
+%global optflags %{optflags} -Wno-error=format-security
+
 %undefine _debugsource_packages
 
 Summary:	Enhanced Doom engine
