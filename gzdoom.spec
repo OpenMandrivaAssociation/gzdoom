@@ -1,6 +1,9 @@
 #global build_ldflags %{build_ldflags} -Wl,--undefined-version
-%define _disable_lto 1
+#define _disable_lto 1
 %define _disable_ld_no_undefined 1
+
+# disable bogus requires
+%global __requires_exclude libdiscord-rpc.*|libminiz.so.*
 
 %global optflags %{optflags} -Wno-error=format-security
 
@@ -23,7 +26,7 @@ BuildRequires:	imagemagick
 BuildRequires:	bzip2-devel
 BuildRequires:	libgomp-devel
 BuildRequires:	jpeg-devel
-#BuildRequires:	mold
+BuildRequires:	mold
 BuildRequires:	discord-rpc-devel
 BuildRequires:	pkgconfig(libwebp)
 BuildRequires:	pkgconfig(fluidsynth)
@@ -80,7 +83,7 @@ Warning! Make sure to place WAD files to %{_datadir}/doom/
 #sed -i s,"<unknown version>","%{version}",g tools/updaterevision/updaterevision.c
 
 %build
-#export LD=mold
+export LD=mold
 export CC=gcc
 export CXX=g++
 %cmake \
