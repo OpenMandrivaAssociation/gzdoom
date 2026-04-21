@@ -17,6 +17,7 @@ Source0:	https://github.com/coelckers/gzdoom/archive/g%{version}/%{name}-g%{vers
 #Patch0:		gzdoom-discord.patch
 #Patch1:		gzdoom-4.10.0-compile.patch
 
+BuildRequires:	make
 BuildRequires:	cmake
 BuildRequires:	imagemagick
 BuildRequires:	bzip2-devel
