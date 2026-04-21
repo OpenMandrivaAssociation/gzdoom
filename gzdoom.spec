@@ -1,26 +1,39 @@
+#global build_ldflags %{build_ldflags} -Wl,--undefined-version
+%define _disable_lto 1
+%define _disable_ld_no_undefined 1
+
+# disable bogus requires
+%global __requires_exclude libdiscord-rpc.*|libminiz.so.*
+
+%global optflags %{optflags} -Wno-error=format-security
+
 %undefine _debugsource_packages
 
 Summary:	Enhanced Doom engine
 Name:		gzdoom
-Version:	4.10.0
-Release:	2
+Version:	4.14.2
+Release:	1
 License:	GPLv3+
 Group:		Games/Arcade
 Url:		https://zdoom.org
 Source0:	https://github.com/coelckers/gzdoom/archive/g%{version}/%{name}-g%{version}.zip
-Patch0:		gzdoom-discord.patch
-Patch1:		gzdoom-4.10.0-compile.patch
+#Patch0:		gzdoom-discord.patch
+#Patch1:		gzdoom-4.10.0-compile.patch
 
+BuildRequires:	make
 BuildRequires:	cmake
 BuildRequires:	imagemagick
 BuildRequires:	bzip2-devel
 BuildRequires:	libgomp-devel
 BuildRequires:	jpeg-devel
+BuildRequires:	mold
 BuildRequires:	discord-rpc-devel
+BuildRequires:	pkgconfig(libwebp)
 BuildRequires:	pkgconfig(fluidsynth)
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:	pkgconfig(miniz)
 BuildRequires:	pkgconfig(sdl2)
 BuildRequires:	pkgconfig(xcursor)
 BuildRequires:	pkgconfig(zlib)
@@ -70,6 +83,9 @@ Warning! Make sure to place WAD files to %{_datadir}/doom/
 #sed -i s,"<unknown version>","%{version}",g tools/updaterevision/updaterevision.c
 
 %build
+export LD=mold
+export CC=gcc
+export CXX=g++
 %cmake \
 	-DCMAKE_BUILD_TYPE=Release \
 	-DINSTALL_PK3_PATH=%{_gamesdatadir}/doom/
